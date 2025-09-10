@@ -11,7 +11,7 @@ import numpy as np
 # --- 1. DATA LOADING AND PROCESSING ---
 
 # Define the input file name
-FASTA_FILE = "data/marine_environmental_DNA_18S(1-50).fasta"
+FASTA_FILE = "data/marine_environmental_DNA_18S.fasta"
 
 print(f"Loading sequences from {FASTA_FILE}...")
 # Use Biopython to read the FASTA file
