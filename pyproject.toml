@@ -6,9 +6,11 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "biopython>=1.85",
+    "joblib>=1.5.2",
     "matplotlib>=3.10.6",
     "numpy>=2.3.3",
     "pandas>=2.3.2",
     "scikit-learn>=1.7.2",
     "seaborn>=0.13.2",
+    "vsearch>=1.1.0",
 ]

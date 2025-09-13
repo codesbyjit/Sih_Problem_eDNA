@@ -1,0 +1,15 @@
+eDNA Classifier Training Report
+=================================
+
+Best Hyperparameters Found:
+{'max_depth': 10, 'min_samples_split': 2, 'n_estimators': 100}
+
+Classification Report:
+              precision    recall  f1-score   support
+
+      fungus      1.000     1.000     1.000         3
+     protist      1.000     1.000     1.000         6
+
+    accuracy                          1.000         9
+   macro avg      1.000     1.000     1.000         9
+weighted avg      1.000     1.000     1.000         9
