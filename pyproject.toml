@@ -3,9 +3,10 @@ name = "sih-problem-edna"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = "~=3.11"
 dependencies = [
     "biopython>=1.85",
+    "imbalanced-learn>=0.14.0",
     "joblib>=1.5.2",
     "matplotlib>=3.10.6",
     "numpy>=2.3.3",

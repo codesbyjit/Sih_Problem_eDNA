@@ -1,0 +1,50 @@
+# ===================================================================
+# Definitive requirements for GPU-Accelerated eDNA Classifier
+# ===================================================================
+# This file is designed to create a stable and complete environment.
+# Install using: uv pip sync requirements.txt
+# -------------------------------------------------------------------
+
+# -- Directs pip to use NVIDIA's official package repository --
+--extra-index-url https://pypi.nvidia.com
+
+# -------------------------------------------------------------------
+# Version Constraints (CRITICAL for stability)
+# -------------------------------------------------------------------
+# Numba (used by RAPIDS) is not yet compatible with NumPy 2.3+
+numpy<2.2
+
+# -------------------------------------------------------------------
+# RAPIDS AI Platform (Main Libraries)
+# -------------------------------------------------------------------
+# Pinning to a specific monthly release (e.g., 24.08.*) prevents
+# unexpected updates from breaking the environment.
+cudf-cu12==24.08.*
+cuml-cu12==24.08.*
+rmm-cu12==24.08.*
+
+# -------------------------------------------------------------------
+# Core GPU & Compilation Dependencies
+# -------------------------------------------------------------------
+# Python bindings for the system's CUDA driver
+cuda-python
+
+# GPU-accelerated array library, a dependency for cuML
+cupy-cuda12x
+
+# Just-In-Time (JIT) compiler for running Python on the GPU
+numba
+
+# A fast lock implementation needed by CuPy
+fastrlock
+
+# -------------------------------------------------------------------
+# Project Libraries (CPU-based tasks and plotting)
+# -------------------------------------------------------------------
+scikit-learn
+pandas
+imbalanced-learn
+biopython
+matplotlib
+seaborn
+joblib
